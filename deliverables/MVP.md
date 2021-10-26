@@ -16,6 +16,9 @@ The features ultimately used in our initial model training are a team's:
 * Deaths at 15
 * Gold difference between teams at 15
 
-Using an 80-20 train-test split, we then trained our logistic regression model on the train data, and then attempted to use the model to predict game results using the test data. To evaluate our initial model, we looked at the accuracy, precision, and ROC scores, which were **0.92**, **0.89**, and **0.95**, respectively. Similarly, we created a confusion_matrix to assess the types of correct/incorrect predictions we were getting.
+Using an 80-20 train-test split, we then trained our logistic regression model on the train data, and then attempted to use the model to predict game results using the test data. To evaluate our initial model, we looked at the **accuracy**, **precision**, and **ROC** scores, which were **0.92**, **0.89**, and **0.95**, respectively. Similarly, we created a confusion_matrix to assess the types of correct/incorrect predictions we were getting.
 
 ![](../resources/confusion_matrix.png)
+
+Looking forward, we plan to further enhance this model with enhanced feature selection and further engineering of our current features. Ultimately, with the appropriate features this model will attempt to make soft win probability predictions using live-game states. 
+
