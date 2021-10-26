@@ -2,6 +2,8 @@
 
 For our MVP, we have done a good portion of the EDA (2021 match data found [here](https://oracleselixir.com/tools/downloads)) for this project and are doing initial fitting and analysis of a basic logistic regression model. 
 
+## Analysis
+
 We started by selecting for a handful of high-impact stats commonly referenced in League of Legends casting and did a basic eye-test using a seaborn pairplot to evaluate these features for viability.
 
 ![](../resources/pair_plot.png)
@@ -20,5 +22,8 @@ Using an 80-20 train-test split, we then trained our logistic regression model o
 
 ![](../resources/confusion_matrix.png)
 
-Looking forward, we plan to further enhance this model with enhanced feature selection and further engineering of our current features. Ultimately, with the appropriate features this model will attempt to make soft win probability predictions using live-game states. 
+As we can see from our confusion matrix, it appears that our model is more likely to predict a false positive than a false negative.
 
+---
+
+Looking forward, we plan to further enhance this model with enhanced feature selection and further engineering of our current features. Ultimately, with the appropriate features this model will attempt to make soft win probability predictions using live-game states. 
