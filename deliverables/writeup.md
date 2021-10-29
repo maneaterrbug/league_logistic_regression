@@ -3,7 +3,7 @@ Matt Ryan
 
 ## Abstract
 
-
+Here we attempt to develop a model that can semi-accurately predict probability of a professional League of Legends e-sport team to win a game based on the a game's current state 15 minutes into the game. Ultimately, the hope here is that this tool can be used by the League of Legends broadcast team to enhance game discussion and viewer experience.
 
 ## Design
 
@@ -12,7 +12,7 @@ League of Legends is one of the most popular video games in the world, with a re
 
 ## Data
 
-The data used here was found on ![Oracle's Elixir](https://oracleselixir.com/tools/downloads), and encompasses 11,604 professional games played in 2021. Because each game represents 12 data points (one for each team respectively, and one for each of the 5 players on each team), totaling 138,528 data points. The set also encompassed 122 features. 
+The data used here was found on [Oracle's Elixir](https://oracleselixir.com/tools/downloads), and encompasses 11,604 professional games played in 2021. Because each game represents 12 data points (one for each team respectively, and one for each of the 5 players on each team), totaling 138,528 data points. The set also encompassed 122 features. 
 
 ## Algorithms
 
@@ -22,7 +22,7 @@ First, in order to for the data to reflect solely the winning and losing teams' 
 
 *Modeling*
 
-We used SKlearn.LogisticRegression() trained using a train-test split of 80-20. Of our 80% training set, we performed grid crossvalidation among 10 subsets and with a grid composed of C (model complexity) values ranging from 1 to 100. Ultimately, it was determined by comparing F1 scores that the model performed the  strongest with a C-value of 16, receiving an F1 score of 0.76. Finally, with our hyperparameters tuned, we trained the model on the train set.
+We used SKlearn.LogisticRegression() trained using a train-test split of 80-20. Of our 80% training set, we performed grid cross-validation among 10 subsets and with a grid composed of C (model complexity) values ranging from 1 to 100. Ultimately, it was determined by comparing F1 scores that the model performed the  strongest with a C-value of 16, receiving an F1 score of 0.76. Finally, with our hyperparameters tuned, we trained the model on the train set.
 
 *Assessing Results*
 
